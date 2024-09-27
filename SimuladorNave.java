@@ -3,20 +3,20 @@ package Simulador;
 //Clase principal que simula la nave espacial
 public class SimuladorNave {
  public static void main(String[] args) {
-     // Crear instancias de cada módulo
+    
      Propulsion propulsion = new Propulsion();
      Habitacion habitacion = new Habitacion();
      Laboratorio laboratorio = new Laboratorio();
 
-     // Variables de recursos
-     int energiaDisponible = 200;
+    
+     int energiaDisponible = 250;
 
-     // Ciclo que simula la gestión de recursos y fallos
-     for (int i = 0; i < 5; i++) { // 5 ciclos de simulación
+     
+     for (int i = 0; i < 5; i++) { 
          System.out.println("Ciclo " + (i + 1) + ":");
          
-         // Monitorear consumo de recursos
-         switch (i % 3) { // Simular la asignación de recursos a un módulo por ciclo
+        
+         switch (i % 3) { 
              case 0:
                  if (energiaDisponible >= Propulsion.RECURSO_NECESARIO) {
                      propulsion.consumirRecursos();

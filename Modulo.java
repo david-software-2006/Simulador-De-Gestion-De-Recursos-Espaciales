@@ -3,8 +3,8 @@ package Simulador;
 abstract class Modulo {
     protected String nombre;
     protected int consumoRecurso;
-    protected int estado;  // 0 = OK, 1 = Necesita reparación
-    protected final int MAX_ESTADO = 100;  // Salud máxima del módulo
+    protected int estado; 
+    protected final int MAX_ESTADO = 100; 
     
     public Modulo(String nombre, int consumoRecurso) {
         this.nombre = nombre;
@@ -12,7 +12,7 @@ abstract class Modulo {
         this.estado = MAX_ESTADO;
     }
 
-    // Método abstracto para monitorear el consumo de recursos
+   
     public abstract void consumirRecursos();
 
     // Método para reparar el módulo
@@ -32,7 +32,7 @@ abstract class Modulo {
 
     // Simular un fallo en el módulo
     public void fallo() {
-        estado -= 30; // Restar salud por fallos
+        estado -= 30; 
         if (estado < 0) estado = 0;
         System.out.println("El módulo " + nombre + " ha sufrido un fallo!");
     }
