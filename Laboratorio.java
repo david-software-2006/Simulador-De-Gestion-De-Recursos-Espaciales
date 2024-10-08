@@ -1,15 +1,14 @@
 package Simulador;
 
-//Clase Laboratorio hereda de Modulo
 class Laboratorio extends Modulo {
-	public static final int RECURSO_NECESARIO = 40;
-	
-	public Laboratorio() {
-		super("Laboratorio", RECURSO_NECESARIO);
-	}
-	
-	@Override
-	public void consumirRecursos() {
-		System.out.println("Laboratorio consumiendo " + consumoRecurso + " unidades de energía");
-	}
+    public static final int RECURSO_NECESARIO = 30;
+
+    public Laboratorio() {
+        super("Laboratorio", RECURSO_NECESARIO);
+    }
+
+    @Override
+    public void consumirRecursos() {
+        System.out.println("El módulo de Laboratorio está consumiendo " + consumoRecurso + " unidades de energía.");
+    }
 }
